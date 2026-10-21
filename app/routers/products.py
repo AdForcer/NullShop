@@ -90,7 +90,7 @@ async def get_all_products(
 
     total = await db.scalar(total_stmt) or 0
 
-    # Основной запрос (если есть поиск - добавим ранг в вборку и сортировку)
+    # Основной запрос (если есть поиск - добавим ранг в выборку и сортировку)
     if rank_col is not None:
         products_stmt = (
             select(ProductModel)
